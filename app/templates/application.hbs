@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<!--<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -7,11 +7,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {{#link-to "index"}}<a class="navbar-brand" href="#">Main</a>{{/link-to}}
+        {{#link-to "index"}}<a class="navbar-brand" href="#">Dossier</a>{{/link-to}}
     </div>
+    <ul class="nav navbar-nav">
+        {{#link-to "directories"}}<a class="navbar-brand" href="#">Directories</a>{{/link-to}}
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active">{{#link-to "about"}}<a href="#">About<span class="sr-only"></span></a>{{/link-to}}</li>
+            {{#link-to "about"}}<a class="navbar-brand" href="#">About</a>{{/link-to}}
       </ul>
   </div> 
-</nav>
-{{outlet}}
+</nav>-->
+
+<div class="container">
+  {{partial 'navbar'}}
+  {{outlet}}
+</div>
+
