@@ -1,13 +1,11 @@
 <h2>List</h2>
-
-{{#each model as |directory|}}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{directory.name}}</h3>
-        </div>
-        <div class="panel-body">
-            <p>Name: {{directory.name}}</p>
-            <p>Type: {{directory.type}}</p>
-        </div>
-    </div>
-{{/each}}
+<div class="row">
+  {{#each model as |directory|}}
+      <div class="col-md-4">
+        {{#directory-item item=directory}}
+          {{#link-to 'directories.edit' directory.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+            <button class="btn btn-danger btn-xs" {{action 'delete' directory}}>Delete</button>
+        {{/directory-item}}
+      </div>
+  {{/each}}
+</div>

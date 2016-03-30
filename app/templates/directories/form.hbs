@@ -1,0 +1,14 @@
+<h2>{{title}}</h2>
+
+<div class="row">
+    <div class="col-md-6">
+      {{directory-item-form item=model buttonLabel=buttonLabel action='save'}}
+    </div>
+
+    <div class="col-md-4">
+      {{#directory-item item=model}}
+          <br/>
+      {{/directory-item}}
+    </div>
+
+</div>

@@ -7,10 +7,11 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about');
-  
+
   this.route('directories', function() {
     this.route('new');
-    });
+    this.route('edit', { path: '/:directory_id/edit' });
+  });
 });
 
 

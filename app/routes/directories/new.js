@@ -2,20 +2,33 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model() {
+  model: function () {
     return this.store.createRecord('directory');
+  },
+
+  setupController: function (controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Create a new library');
+    controller.set('buttonLabel', 'Create');
+  },
+
+  renderTemplate() {
+    this.render('directories/form');
   },
 
   actions: {
 
-    save(newDir) {
-      newDir.save().then(() => this.transitionTo('directories'));
+    save(newLibrary) {
+      newLibrary.save().then(() => this.transitionTo('directories'));
     },
 
     willTransition() {
-      // rollbackAttributes() removes the record from the store
-      // if the model 'isNew'
-      this.controller.get('model').rollbackAttributes();
+      let model = this.controller.get('model');
+
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
     }
   }
 });
