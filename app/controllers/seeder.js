@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
 
       for (let i = 0; i < counter; i++) {
         this.store.createRecord('directory').randomize().save().then(() => {
-          if (i === counter-1) {
+          if (i === counter - 1) {
             this.set('directoriesCounter', 0);
             this.set('dirDone', true);
           }
@@ -61,7 +61,7 @@ export default Ember.Controller.extend({
 
     for (let j = 0; j < itemCounter; j++) {
       const directory = this._selectRandomDirectory();
-      this.store.createRecord(' itembook')
+      this.store.createRecord('item')
         .randomize(author, directory)
         .save();
       author.save();
