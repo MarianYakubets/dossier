@@ -4,6 +4,15 @@ import Ember from 'ember';
 export default DS.Model.extend({
   name: DS.attr('string'),
   type: DS.attr('number'),
+  items: DS.hasMany('items'),
 
-  isValid: Ember.computed.notEmpty('name')
+  isValid: Ember.computed.notEmpty('name'),
+  
+   randomize() {
+    this.set('name', Faker.random.words() + ' Directory');
+    this.set('type', Faker.random.number());
+
+    // If you would like to use in chain.
+    return this;
+  }
 });

@@ -8,11 +8,11 @@ export default Ember.Route.extend({
 
   actions: {
 
-    delete(library) {
+    delete(dir) {
       let confirmation = confirm('Are you sure?');
 
       if (confirmation) {
-        library.destroyRecord();
+        dir.destroyRecord();
       }
     }
   }

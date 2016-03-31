@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   setupController(controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Edit library');
+    controller.set('title', 'Edit directory');
     controller.set('buttonLabel', 'Save changes');
   },
 
@@ -19,8 +19,8 @@ export default Ember.Route.extend({
 
   actions: {
 
-    save(newLibrary) {
-      newLibrary.save().then(() => this.transitionTo('directories'));
+    save(newDirectory) {
+      newDirectory.save().then(() => this.transitionTo('directories'));
     },
 
     willTransition(transition) {

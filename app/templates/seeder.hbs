@@ -1,0 +1,25 @@
+<h1>Seeder, our Data Center</h1>
+
+<div class="row">
+  <div class="col-md-4">{{number-box title="Directories" number=directories.length}}</div>
+  <div class="col-md-4">{{number-box title="Authors" number=authors.length}}</div>
+  <div class="col-md-4">{{number-box title="Items" number=items.length}}</div>
+</div>
+
+{{seeder-block
+    sectionTitle='Directories'
+    counter=directoriesCounter
+    generateAction='generateDirectories'
+    deleteAction='deleteDirectories'
+    createReady=dirDone
+    deleteReady=dirDelDone
+}}
+
+{{seeder-block
+  sectionTitle='Authors with Items'
+  counter=authorCounter
+  generateAction='generateItemsAndAuthors'
+  deleteAction='deleteItemsAndAuthors'
+  createReady=authDone
+  deleteReady=authDelDone
+}}
