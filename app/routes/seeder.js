@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       directories: this.store.findAll('directory'),
       items: this.store.findAll('item'),
       authors: this.store.findAll('author')
-    })
+    });
   },
 
   setupController(controller, model) {

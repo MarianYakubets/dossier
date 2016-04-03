@@ -1,0 +1,9 @@
+<div class="row">
+  {{#each model as |board|}}
+      <div class="col-md-3">
+        {{#board-select-item item=board}}
+          {{#link-to 'boards.edit' board.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+        {{/board-select-item}}
+      </div>
+  {{/each}}
+</div>

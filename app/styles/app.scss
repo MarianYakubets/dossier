@@ -2,20 +2,14 @@
 
 body {
   padding-top: 20px;
+  background-color: #b9def0;
 }
 
 html {
   overflow-y: scroll;
 }
 
-.directory-item {
-  min-height: 150px;
+a{
+  display:block;
 }
 
-.label-fade {
-  opacity: 0;
-  @include transition(all 0.5s);
-  &.label-show {
-    opacity: 1;
-  }
-}

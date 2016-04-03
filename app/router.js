@@ -12,8 +12,13 @@ Router.map(function() {
     this.route('new');
     this.route('edit', { path: '/:directory_id/edit' });
   });
+  
   this.route('seeder');
-  this.route('boards');
+  
+  this.route('boards', function() {
+    this.route('new');
+    this.route('edit', { path: '/:board_id/edit' });
+  });
 });
 
 
