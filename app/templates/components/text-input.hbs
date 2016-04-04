@@ -1,0 +1,7 @@
+{{#if isEditing}}
+  {{input type="text" value=text class="form-control" autofocus="autofocus"}}
+{{else}}
+    <label {{action "edit" on="click"}}>{{text}}</label>
+{{/if}}
+
+
