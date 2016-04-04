@@ -1,7 +1,7 @@
 <h2>{{model.name}}</h2>
-<div class="row">
-    <button class="btn btn-danger btn-lg pull-right" {{action 'delete' model}}>Delete</button>
-    <button class="btn btn-success pull-left" {{action 'addGroup' model}}>Add group</button>
+<div class="row pull-right">
+        <button class="btn btn-success" {{action 'addGroup' model}}>Add group</button>
+    <button class="btn btn-danger" {{action 'delete' model}}>Delete board</button>
 </div>
 <div class="row">
   {{#each model.groups as |group|}}
