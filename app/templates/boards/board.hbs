@@ -1,3 +1,15 @@
-<button class="btn btn-danger btn-lg pull-right" {{action 'delete' model}}>Delete</button>
 <h2>{{model.name}}</h2>
+<div class="row">
+    <button class="btn btn-danger btn-lg pull-right" {{action 'delete' model}}>Delete</button>
+    <button class="btn btn-success pull-left" {{action 'addGroup' model}}>Add group</button>
+</div>
+<div class="row">
+  {{#each model.groups as |group|}}
+      <div class="col-md-3">
+        {{#group-item item=group}}
+            <button class="btn btn-danger btn-xs" {{action 'deleteGroup' group}}>Delete</button>
+        {{/group-item}}
+      </div>
+  {{/each}}
+ </div>
 

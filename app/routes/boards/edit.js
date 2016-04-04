@@ -18,6 +18,20 @@ export default Ember.Route.extend({
       if (confirmation) {
         board.destroyRecord().then(() => this.transitionTo('boards'));
       }
+    },
+    
+    addGroup(board){
+        let group = this.store.createRecord('group', {
+        name: "title",
+        type: 1,
+        board:board
+     });
+     group.save();
+     board.save();
+    },
+    
+     deleteGroup(group){
+        group.destroyRecord();
     }
   }
 });
