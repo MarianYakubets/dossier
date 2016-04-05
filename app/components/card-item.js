@@ -1,5 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    haveName:true
+    hower:false,
+    
+    mouseEnter: function(evt) {
+        this.set('hower', true);
+    },
+    
+    mouseLeave: function(evt) {
+       this.set('hower', false);
+    }
 });

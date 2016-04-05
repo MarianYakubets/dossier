@@ -1,8 +1,6 @@
-<div class="panel panel-default card-item">
-    <div class="panel-body">
-        {{item.text}}
-    </div>
-    <div class="panel-footer text-right">
-        {{yield}}
-    </div>
+<div class="bs-callout" style="position:relative;">
+  {{#if hower}}
+    <span class="glyphicon glyphicon-remove" style="position:absolute;top:5px;right:5px;margin:0;padding:5px 3px;" aria-hidden="true"></span>
+  {{/if}}
+  <p>{{#text-input text=item.text model=item}}{{/text-input}}</p>
 </div>

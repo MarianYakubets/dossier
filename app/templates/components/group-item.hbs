@@ -1,6 +1,7 @@
 <div class="panel panel-default group-item">
         <div class="panel-heading">
-            <h3 class="panel-title">{{item.name}}</h3>
+            <h3 class="panel-title">{{#text-input text=item.name model=item}}{{/text-input}}
+</h3>
         </div>
     <div class="panel-body">
           {{#each item.cards as |card|}}
