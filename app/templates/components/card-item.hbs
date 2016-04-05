@@ -1,6 +1,7 @@
 <div class="bs-callout" style="position:relative;">
   {{#if hower}}
-    <span class="glyphicon glyphicon-remove" style="position:absolute;top:5px;right:5px;margin:0;padding:5px 3px;" aria-hidden="true"></span>
+    <button style="position:absolute;top:5px;right:5px;margin:0;padding:5px 3px;" {{action "remove" post on="mouseUp"}}><span class="glyphicon glyphicon-remove"  aria-hidden="true"></span>
+</button>
   {{/if}}
   <p>{{#text-input text=item.text model=item}}{{/text-input}}</p>
 </div>

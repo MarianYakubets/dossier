@@ -9,5 +9,11 @@ export default Ember.Component.extend({
     
     mouseLeave: function(evt) {
        this.set('hower', false);
+    },
+    
+    actions : {
+        remove(params) {
+            console.log('remove');
+        }
     }
 });
