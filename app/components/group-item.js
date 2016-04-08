@@ -16,6 +16,10 @@ export default Ember.Component.extend({
 
       deleteCard(card){
         card.destroyRecord();
-      }
+      },
+      
+       saveAction(item){
+         item.save();
+      } 
     }
 });

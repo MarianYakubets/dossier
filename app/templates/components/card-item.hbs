@@ -3,5 +3,5 @@
     <button style="position:absolute;top:5px;right:5px;margin:0;padding:5px 3px;" {{action "remove" item on="mouseUp"}}><span class="glyphicon glyphicon-remove"  aria-hidden="true"></span>
 </button>
   {{/if}}
-  <p>{{#text-input text=item.text model=item}}{{/text-input}}</p>
+  <p>{{#text-input text=item.text saveAction=(action 'saveAction' item) }}{{/text-input}}</p>
 </div>

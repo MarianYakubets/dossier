@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading text-center">
-        {{#text-input text=item.name model=item}}{{/text-input}}
+        {{#text-input text=item.name saveAction=(action 'saveAction' item)}}{{/text-input}}
     </div>
     <div class="panel-body text-center">{{yield}}</div>
 </div>
