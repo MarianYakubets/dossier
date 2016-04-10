@@ -14,6 +14,9 @@ export default Ember.Component.extend({
     actions : {
         remove(card) {
             card.destroyRecord();
+        },
+        saveAction(item){
+            item.save();
         }
     }
 });

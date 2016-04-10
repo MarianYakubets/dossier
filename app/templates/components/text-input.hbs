@@ -1,6 +1,6 @@
 {{#if isEditing}}
   {{focus-input  multiple="multiple" type="text"  value=text class="form-control" 
-  focus-out=(action 'save' model) enter=(action 'save' model)}}
+  focus-out=(action 'saveAction') enter=(action 'saveAction')}}
 {{else}}
     <label {{action "edit" on="click"}}>{{text}}</label>
 {{/if}}
