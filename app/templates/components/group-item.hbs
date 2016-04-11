@@ -1,17 +1,20 @@
 <div class="panel panel-default group-item">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{#text-input text=item.name saveAction=(action 'saveAction' item)}}{{/text-input}}
-</h3>
-        </div>
+    <div class="panel-heading">
+        <h3 class="panel-title">{{#text-input text=item.name saveAction=(action 'saveAction' item)}}{{/text-input}}
+        </h3>
+    </div>
     <div class="panel-body">
-          {{#each item.cards as |card|}}
-                {{#card-item item=card}}
-                    <button class="btn btn-danger btn-xs" {{action 'deleteCard' card}}>Delete</button>
-                {{/card-item}}
-        {{/each}}
+      {{#each item.cards as |card|}}
+        {{#card-item item=card}}{{/card-item}}
+      {{/each}}
+      {{#if newCardCreation}}
+          <div class="bs-callout" style="position:relative;">
+              <p>{{#text-input text=newCardName saveAction=(action 'createCardAction' item)isEditing=true}}{{/text-input}}</p>
+          </div>
+      {{/if}}
     </div>
     <div class="panel-footer text-right">
-      <button class="btn btn-success btn-xs" {{action 'addCard' item}}>Add</button>
+        <button class="btn btn-success btn-xs" {{action 'addCard'}}>Add</button>
       {{yield}}
     </div>
 </div>
